@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface FeaturedProjectProps {
   title: string;
@@ -66,7 +67,8 @@ const FeaturedProject = ({
 
           {/* CTA */}
           <div className="pt-4">
-            <button
+            <Link
+              href={"/projects/"+title}
               className="
                 group inline-flex items-center gap-3
                 rounded-xl px-8 py-4
@@ -80,7 +82,7 @@ const FeaturedProject = ({
             >
               <span>Explore the system</span>
               <ArrowRight className="transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -112,6 +114,7 @@ const FeaturedProject = ({
             </h4>
             <div className="flex flex-wrap gap-2">
               {tags.map(tag => (
+
                 <span
                   key={tag}
                   className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary"

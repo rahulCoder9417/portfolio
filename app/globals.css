@@ -59,6 +59,7 @@
   --font-body: 'Inter', sans-serif;
 }
 
+
 /* ----------------------------------------
    Tailwind v4 Theme Mapping
 ---------------------------------------- */
@@ -176,4 +177,169 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* imported tokens *//* project token */
+/* ----------------------------------------
+   Project Route – Scoped Tokens
+---------------------------------------- */
+.project-scope {
+  --project-background: 220 20% 6%;
+  --project-foreground: 210 20% 95%;
+
+  --project-card: 220 18% 10%;
+  --project-card-foreground: 210 20% 95%;
+
+  --project-popover: 220 18% 10%;
+  --project-popover-foreground: 210 20% 95%;
+
+  --project-primary: 18 90% 55%;
+  --project-primary-foreground: 220 20% 6%;
+
+  --project-secondary: 220 15% 15%;
+  --project-secondary-foreground: 210 20% 85%;
+
+  --project-muted: 220 15% 18%;
+  --project-muted-foreground: 215 15% 55%;
+
+  --project-accent: 25 85% 50%;
+  --project-accent-foreground: 220 20% 98%;
+
+  --project-border: 220 15% 18%;
+  --project-input: 220 15% 18%;
+  --project-ring: 18 90% 55%;
+
+  --project-radius: 0.75rem;
+
+  /* Extra tokens */
+  --project-glow-primary: 18 90% 55%;
+  --project-surface-elevated: 220 16% 12%;
+  --project-surface-overlay: 220 14% 8%;
+  --project-text-tertiary: 215 12% 45%;
+
+  --project-gradient-start: 18 90% 55%;
+  --project-gradient-end: 35 95% 60%;
+}
+
+
+@layer base {
+  .project-scope {
+    --background: var(--project-background);
+    --foreground: var(--project-foreground);
+
+    --card: var(--project-card);
+    --card-foreground: var(--project-card-foreground);
+
+    --primary: var(--project-primary);
+    --primary-foreground: var(--project-primary-foreground);
+
+    --secondary: var(--project-secondary);
+    --secondary-foreground: var(--project-secondary-foreground);
+
+    --muted: var(--project-muted);
+    --muted-foreground: var(--project-muted-foreground);
+
+    --accent: var(--project-accent);
+    --accent-foreground: var(--project-accent-foreground);
+
+    --border: var(--project-border);
+    --input: var(--project-input);
+    --ring: var(--project-ring);
+  }
+}
+@layer base {
+  .project-scope {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .project-scope h1,
+  .project-scope h2,
+  .project-scope h3,
+  .project-scope h4,
+  .project-scope h5,
+  .project-scope h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+@layer components {
+  .project-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--project-gradient-start)),
+      hsl(var(--project-gradient-end))
+    );
+  }
+
+  .project-glow {
+    box-shadow: 0 0 40px -10px hsl(var(--project-glow-primary) / 0.4);
+  }
+
+  .project-glow-subtle {
+    box-shadow: 0 0 20px -5px hsl(var(--project-glow-primary) / 0.2);
+  }
+
+  .project-card-elevated {
+    @apply border rounded-xl;
+    background-color: hsl(var(--project-surface-elevated));
+    border-color: hsl(var(--project-border));
+  }
+
+  .project-video-placeholder {
+    @apply relative overflow-hidden rounded-xl border;
+    background-color: hsl(var(--project-surface-overlay));
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-video-placeholder::before {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--project-primary) / 0.05),
+      transparent
+    );
+  }
+
+  .project-section-divider {
+    @apply border-t;
+    border-color: hsl(var(--project-border) / 0.5);
+  }
+}
+@layer utilities {
+  .project-font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .project-animate-fade-in {
+    animation: projectFadeIn 0.6s ease-out forwards;
+  }
+
+  .project-animate-slide-up {
+    animation: projectSlideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes projectFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes projectSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+
+  .project-delay-100 { animation-delay: 100ms; }
+  .project-delay-200 { animation-delay: 200ms; }
+  .project-delay-300 { animation-delay: 300ms; }
+  .project-delay-400 { animation-delay: 400ms; }
+  .project-delay-500 { animation-delay: 500ms; }
 }

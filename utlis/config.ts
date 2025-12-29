@@ -26,9 +26,9 @@ export const config ={
         "Database-driven scalable architectures",
     ],
     "leetCodeStats": {
-        "solved": 86,
+        "solved": 87,
         "easy": 19,
-        "medium": 67,
+        "medium": 68,
         "hard": 0,
     },
     "socials": [
