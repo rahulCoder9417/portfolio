@@ -1,6 +1,13 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export const config ={
+  
+  "leetCodeStats": {
+    "solved": 89,
+    "easy": 19,
+    "medium": 70,
+    "hard": 0,
+},
     "about": {
         "age": 19,
         "status": "BCA Student",
@@ -25,12 +32,6 @@ export const config ={
         "REST + WebSocket hybrid APIs",
         "Database-driven scalable architectures",
     ],
-    "leetCodeStats": {
-        "solved": 87,
-        "easy": 19,
-        "medium": 68,
-        "hard": 0,
-    },
     "socials": [
         { icon: Github, label: "GitHub", href: "https://github.com/your-username" },
         { icon: Linkedin, label: "LinkedIn", href: "#" },
