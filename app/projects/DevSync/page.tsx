@@ -116,6 +116,7 @@ const Index = () => {
         "Xvfb",
         "Yjs",
         "Fluxbox",
+        "Clerk",
         "x11vnc",
         "noVNC",
       ].map((tech) => (
