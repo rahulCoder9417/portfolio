@@ -3,9 +3,9 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 export const config ={
   
   "leetCodeStats": {
-    "solved": 89,
+    "solved": 90,
     "easy": 19,
-    "medium": 70,
+    "medium": 71,
     "hard": 0,
 },
     "about": {

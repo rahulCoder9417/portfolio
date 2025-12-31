@@ -21,3 +21,10 @@ export function FeatureBadge({ children, className }: FeatureBadgeProps) {
     </span>
   );
 }
+
+
+export const TechBadge = ({ children }: { children: React.ReactNode }) => (
+  <span className="px-2.5 py-0.5 rounded-md bg-orange-500/10 text-orange-400 border border-orange-500/20 text-sm font-medium">
+    {children}
+  </span>
+);
