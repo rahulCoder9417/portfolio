@@ -90,10 +90,10 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="flex items-start p-8 gap-6">
-              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalBasic.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalBasicOp.mp4" size="xl" hoverSpeedUp={true} />
 
 
-              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalStatic.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalStaticWebsite.mp4" size="xl" hoverSpeedUp={true} />
 
             </div>
           </FullBleed>
@@ -116,7 +116,7 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="space-y-4 flex flex-col items-center justify-center">
-              <DemoVideo src="/DevSync/videos/TerminalMain/TerminalGui.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="/DevSync/videos/TerminalMain/TerminalGui1.mp4" size="xl" hoverSpeedUp={true} />
               <GUIExecutionDetail />
             </div>
 
@@ -129,7 +129,7 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="space-y-4 flex flex-col items-center justify-center">
-              <DemoVideo src="/DevSync/videos/TerminalMain/TerminalPreview.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="/DevSync/videos/TerminalMain/TerminalPreview1.mp4" size="xl" hoverSpeedUp={true} />
               <LivePreviewDetail />
             </div>
           </FullBleed>
@@ -152,7 +152,7 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="flex gap-6 flex-col  items-center justify-center p-8">
-              <DemoVideo src="/DevSync/videos/gitClone/gitCloneRepo.mp4" size="xl" vignette={true} vignetteIntensity="light" hoverSpeedUp={true} />
+              <DemoVideo src="/DevSync/videos/gitClone/gitClone.mp4" size="xl" vignette={true} vignetteIntensity="light" hoverSpeedUp={true} />
               <GitImportDetail />
             </div>
           </FullBleed>
