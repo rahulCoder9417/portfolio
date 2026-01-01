@@ -90,7 +90,7 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="flex items-start p-8 gap-6">
-              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalBasicOp.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalBasic.mp4" size="xl" hoverSpeedUp={true} />
 
 
               <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalStaticWebsite.mp4" size="xl" hoverSpeedUp={true} />
@@ -140,7 +140,7 @@ const DevSyncAbout = () => {
           <h3 className="text-lg font-medium text-muted-foreground project-font-mono tracking-wide">
             06 — Built-in Team Chat
           </h3>
-          <SyncedVideos srcA="/DevSync/videos/TeamChat/3sharing.mp4" srcB="/DevSync/videos/TeamChat/3recevieng.mp4" size="xl" lazyLoad={true} />
+          <SyncedVideos srcA="/DevSync/videos/TeamChat/3Sharing.mp4" srcB="/DevSync/videos/TeamChat/3recieving.mp4" size="xl" lazyLoad={true} />
 
           <TeamChatDetail />
         </div>

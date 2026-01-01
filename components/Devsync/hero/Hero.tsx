@@ -45,7 +45,7 @@ const Hero = () => {
                 <ArrowDown className="w-4 h-4" />
                 See It in Action
               </Button>
-              <Link href="https://dev-sync-zeta.vercel.app/" target="_blank">
+              <Link href="https://dev-sync-blush.vercel.app/" target="_blank">
                 <Button
                   variant="link"
                   size="default"
