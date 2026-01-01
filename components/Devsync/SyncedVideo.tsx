@@ -114,7 +114,7 @@ export function SyncedVideos({
     <FullBleed>
       <div 
         ref={containerRef}
-        className="flex gap-8 items-start justify-center p-8"
+        className="flex gap-8 items-start justify-center p-8 max-md:flex-col"
       >
         <DemoVideo 
           ref={leftRef} 

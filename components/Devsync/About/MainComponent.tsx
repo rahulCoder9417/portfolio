@@ -32,7 +32,7 @@ const DevSyncAbout = () => {
           <h3 className="text-lg font-medium text-muted-foreground project-font-mono tracking-wide">
             01 — Real-Time Code Syncing
           </h3>
-          <SyncedVideos srcA="/DevSync/videos/CodeSharing/1sharing.mp4" srcB="/DevSync/videos/CodeSharing/1recieving.mp4" size="xl" lazyLoad={false} />
+          <SyncedVideos srcA="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/1sharing.mp4" srcB="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/1recieving.mp4" size="xl" lazyLoad={false} />
 
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
             <div className="flex items-center gap-2 mb-4">
@@ -89,11 +89,11 @@ const DevSyncAbout = () => {
             02 — Integrated Terminal Execution
           </h3>
           <FullBleed>
-            <div className="flex items-start p-8 gap-6">
-              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalBasic.mp4" size="xl" hoverSpeedUp={true} />
+            <div className="flex items-start p-8 gap-6 max-md:flex-col">
+              <DemoVideo src="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/TerminalBasic.mp4" size="xl" hoverSpeedUp={true} />
 
 
-              <DemoVideo src="/DevSync/videos/TerminalBasic/TerminalStaticWebsite.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/TerminalStaticWebsite.mp4" size="xl" hoverSpeedUp={true} />
 
             </div>
           </FullBleed>
@@ -105,7 +105,7 @@ const DevSyncAbout = () => {
           <h3 className="text-lg font-medium text-muted-foreground project-font-mono tracking-wide">
             03 — File System Synchronization
           </h3>
-          <SyncedVideos srcA="/DevSync/videos/FileCrud/2sharing.mp4" srcB="/DevSync/videos/FileCrud/2recevieng.mp4" size="xl" lazyLoad={true} />
+          <SyncedVideos srcA="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/2sharing.mp4" srcB="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/2recevieng.mp4" size="xl" lazyLoad={true} />
           <FileSystemSyncDetail />
         </div>
 
@@ -116,7 +116,7 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="space-y-4 flex flex-col items-center justify-center">
-              <DemoVideo src="/DevSync/videos/TerminalMain/TerminalGui1.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/TerminalGui1.mp4" size="xl" hoverSpeedUp={true} />
               <GUIExecutionDetail />
             </div>
 
@@ -129,7 +129,7 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="space-y-4 flex flex-col items-center justify-center">
-              <DemoVideo src="/DevSync/videos/TerminalMain/TerminalPreview1.mp4" size="xl" hoverSpeedUp={true} />
+              <DemoVideo src="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/TerminalPreview1.mp4" size="xl" hoverSpeedUp={true} />
               <LivePreviewDetail />
             </div>
           </FullBleed>
@@ -140,7 +140,7 @@ const DevSyncAbout = () => {
           <h3 className="text-lg font-medium text-muted-foreground project-font-mono tracking-wide">
             06 — Built-in Team Chat
           </h3>
-          <SyncedVideos srcA="/DevSync/videos/TeamChat/3Sharing.mp4" srcB="/DevSync/videos/TeamChat/3recieving.mp4" size="xl" lazyLoad={true} />
+          <SyncedVideos srcA="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/3Sharing.mp4" srcB="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/3recieving.mp4" size="xl" lazyLoad={true} />
 
           <TeamChatDetail />
         </div>
@@ -152,7 +152,7 @@ const DevSyncAbout = () => {
           </h3>
           <FullBleed>
             <div className="flex gap-6 flex-col  items-center justify-center p-8">
-              <DemoVideo src="/DevSync/videos/gitClone/gitClone.mp4" size="xl" vignette={true} vignetteIntensity="light" hoverSpeedUp={true} />
+              <DemoVideo src="https://rsdxl2za4pnky0yh.public.blob.vercel-storage.com/gitClone.mp4" size="xl" vignette={true} vignetteIntensity="light" hoverSpeedUp={true} />
               <GitImportDetail />
             </div>
           </FullBleed>

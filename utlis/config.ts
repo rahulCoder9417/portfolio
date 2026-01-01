@@ -124,7 +124,7 @@ export const config ={
         description:
           "NewTube is a full-stack social media platform that blends short-form content, micro-posts, and video sharing into a unified experience. Users can create posts, upload video shorts, interact through likes, dislikes, and comments, and edit their content in real time. The platform is built with a scalable REST-based backend and a responsive frontend, enabling smooth content discovery and user engagement.",
       
-          imageUrl: "/NewTube-Main.png", // optional if you add later
+          imageUrl: "/NewTube-main.png", // optional if you add later
       
         highlights: [
           "User-generated posts and video shorts",
