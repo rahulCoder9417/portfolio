@@ -1,27 +1,11 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { FeatureBadge, TechBadge } from "@/components/Devsync/FeatureBadge";
-import { VideoPlaceholder } from "@/components/Devsync/VideoPlaceholder";
 import { SectionTitle } from "@/components/Devsync/SectionTitle";
-import { TechHighlight } from "@/components/Devsync/TechHighlight";
 import  {ArchitectureDiagram}  from "@/components/Devsync/ArchitectureDiagram";
 import {
-  Play,
-  FileText,
-  Zap,
-  Box,
-  Shield,
-  Terminal,
-  GitBranch,
-  Layers,
   ArrowRight,
   Github,
   Mail,
-  ArrowLeft,
-  ArrowDown,
-  Code2,
-  Users,
-  FileCode
 } from "lucide-react";
 import { FullBleed } from "@/components/Devsync/MaxWidth";
 import DevSyncAbout from "@/components/Devsync/About/MainComponent";
@@ -29,12 +13,77 @@ import Hero from "@/components/Devsync/hero/Hero";
 import Problem from "@/components/Devsync/Problem/Problem";
 import Basic from "@/components/Devsync/Architectur/Basic";
 import Link from "next/link";
+import ProjectFooter from "@/components/ProjectFooter";
 const Index = () => {
+  const BasicData: {
+    mainH: string;
+    secH: string;
+    desc: string;
+    components: string[];
+  }[] = [
+    {
+      mainH: "CLIENT",
+      secH: "Browser IDE",
+      desc:
+        "Unified interface containing editor, terminal, preview, and chat — fully synchronized across users.",
+      components: [
+        "Code Editor",
+        "Terminal",
+        "Chat",
+        "Live Preview",
+      ],
+    },
+    {
+      mainH: "REAL-TIME CORE",
+      secH: "Collaboration & Awareness Engine",
+      desc:
+        "Handles live code sync, cursor presence, file state, and multi-user awareness using persistent connections.",
+      components: [
+        "WebSockets",
+        "Live Sync",
+        "Presence",
+        "Conflict-free Updates",
+      ],
+    },
+    {
+      mainH: "EXECUTION",
+      secH: "Isolated Code Execution Environment",
+      desc:
+        "Runs real projects in isolated containers with full access to npm, CLI tools, backend servers, and build systems.",
+      components: [
+        "Docker",
+        "npm",
+        "Vite",
+        "Backend Servers",
+      ],
+    },
+    {
+      mainH: "VISUALIZATION",
+      secH: "GUI Virtualization Layer",
+      desc:
+        "Enables GUI-based applications to run headlessly on the server and stream their display directly into the browser.",
+      components: [
+        "Xvfb",
+        "X11",
+        "noVNC",
+        "Browser Rendering",
+      ],
+    },
+  ];
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative pt-16 pb-20 md:pt-24 md:pb-32 overflow-hidden">
-       <Hero />
+       <Hero title="DevSync" description="A real-time collaborative cloud IDE that lets teams write, run, and ship code together — directly from the browser." features={[
+        "Real-time Collaboration",
+        "WebSockets",
+        "Docker-based Execution",
+        "GUI and Local Server Support",
+      ]} actions={[
+        { label: "scroll", href: "how-devsync-works" },
+        { label: "link", href: "https://dev-sync-blush.vercel.app/" },
+      ]} />
         {/* Background Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-gradient-radial from-primary/10 via-transparent to-transparent pointer-events-none blur-3xl opacity-50" />
       </section>
@@ -54,7 +103,11 @@ const Index = () => {
 
       {/* Architecture */}
       <section className="relative py-24">
-       <Basic/>
+       <Basic 
+       description="  DevSync is built as a layered real-time system where collaboration,
+                execution, and visualization operate as one pipeline."
+       data={BasicData}  
+      />
       </section>
 
       {/* Divider */}
@@ -139,48 +192,8 @@ const Index = () => {
 
       {/* Divider */}
       <div className="project-section-divider" />
-
-      {/* Call to Action */}
-      <section className="py-20 md:py-28">
-        <div className="container max-w-3xl mx-auto px-6 text-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-                Ready to explore?
-              </h2>
-              <p className="text-muted-foreground">
-                Dive into the source code or get in touch to discuss the implementation.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="https://github.com/rahulCoder9417/dev-sync" target="_blank" className="flex items-center gap-2">
-              <Button variant="glow" size="lg">
-                <Github className="w-4 h-4" />
-                Explore the Code
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-              </Link>
-              <Link href="/#contact"  className="">
-              <Button variant="outline" size="lg">
-                <Mail className="w-4 h-4" />
-                Contact Me
-              </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t border-border">
-        <div className="container max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p className="project-font-mono">DevSync — Built for developers, by me.</p>
-            <p>© 2025. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+<ProjectFooter githubLink="dev-sync" />
+      
     </div>
   );
 };

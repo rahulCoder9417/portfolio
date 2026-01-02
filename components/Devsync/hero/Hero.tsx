@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { FeatureBadge } from '../FeatureBadge'
 
-const Hero = () => {
+const Hero = ({title,description,features,actions}: {title: string, description: string, features: string[], actions: {label: string, href: string,}[]}) => {
   return (
     <div className="container max-w-5xl mx-auto px-6">
           <div className="project-animate-fade-in space-y-10">
@@ -12,22 +12,19 @@ const Hero = () => {
             {/* Title & Description */}
             <div className="space-y-6 text-center md:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                <span className="project-gradient-text">DevSync</span>
+                <span className="project-gradient-text">{title}</span>
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto md:mx-0">
-                A real-time collaborative cloud IDE that lets teams write, run,
-                and ship code together — directly from the browser.
+                {description}
               </p>
             </div>
 
             {/* Feature Badges */}
             <div className="flex flex-wrap justify-center md:justify-start gap-3">
-              <FeatureBadge>Real-time Collaboration</FeatureBadge>
-              <FeatureBadge>WebSockets</FeatureBadge>
-              <FeatureBadge>Docker-based Execution</FeatureBadge>
-              
-              <FeatureBadge>GUI and Local Server Support</FeatureBadge>
+              {features.map((feature) => (
+                <FeatureBadge key={feature}>{feature}</FeatureBadge>
+              ))}
             </div>
 
             {/* Actions */}
@@ -38,14 +35,14 @@ const Hero = () => {
                 className="project-font-mono font-bold"
                 onClick={() =>
                   document
-                    .getElementById("how-devsync-works")
+                    .getElementById(actions[0].href)
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
                 <ArrowDown className="w-4 h-4" />
                 See It in Action
               </Button>
-              <Link href="https://dev-sync-blush.vercel.app/" target="_blank">
+              <Link href={actions[1].href} target="_blank">
                 <Button
                   variant="link"
                   size="default"

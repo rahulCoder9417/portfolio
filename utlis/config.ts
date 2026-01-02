@@ -3,9 +3,9 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 export const config ={
   
   "leetCodeStats": {
-    "solved": 90,
+    "solved": 92,
     "easy": 19,
-    "medium": 71,
+    "medium": 73,
     "hard": 0,
 },
     "about": {
@@ -94,7 +94,10 @@ export const config ={
         category: "Library Management & Access Control System",
       
         description:
-          "Bookwise is a full-stack library management platform that allows users to browse and borrow books while enforcing controlled access through authentication, authorization, and rate limiting. The system includes an admin-only dashboard for managing requests, approving or banning users, and maintaining library operations. It leverages secure authentication flows, background jobs for email notifications, and Redis-backed rate limiting to ensure reliability, security, and performance at scale.",
+          `BookWise is a full-stack library management system designed with real-world access control and automation.
+Users can discover, borrow, and return books through a secure, approval-based flow.
+Admins manage users and inventory with protected routes and fine-grained permissions.
+Background workflows automate emails, reminders, and overdue handling reliably.`,
         isFeatured: false,
         imageUrl: "/Library-Main.png", // optional if you add later
       
@@ -114,7 +117,7 @@ export const config ={
           "Redis",
           "Rate Limiting",
           "QStash",
-          "Email Services",
+          "NodeMailer",
         ],
       },
     "ThirdProject":{
