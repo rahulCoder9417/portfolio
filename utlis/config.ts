@@ -3,9 +3,9 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 export const config ={
   
   "leetCodeStats": {
-    "solved": 92,
+    "solved": 95,
     "easy": 19,
-    "medium": 73,
+    "medium": 76,
     "hard": 0,
 },
     "about": {
@@ -14,7 +14,7 @@ export const config ={
         "open_to_work": true
     },
     "techStack": {
-        "primary": ["Next.js", "Node.js", "WebSockets","React.js","JavaScript","TypeScript","Prisma","RTK","Postgres SQL","Redis","Mongoose","Express","Drizzle","Docker","Git","Render","Vercel"],
+        "primary": ["Next.js", "Node.js","Yjs", "WebSockets","React.js","JavaScript","TypeScript","Prisma","RTK","Postgres SQL","Redis","Express","Drizzle","Docker","Git","Mongo DB","Zod","Render","Vercel"],
         "secondary": ["Python","C","C++","Tailwind","Shadcn","HTML","Cloudinary"],
     },
     "coreExpertise": [
@@ -133,7 +133,6 @@ Background workflows automate emails, reminders, and overdue handling reliably.`
           "User-generated posts and video shorts",
           "Like, dislike, comment, and edit interactions",
           "Content feed with real-time updates",
-          "Role-based user actions and permissions",
           "Scalable REST APIs using Node.js and Express",
           "MongoDB data modeling for social interactions",
         ],
