@@ -42,6 +42,7 @@ export async function GET() {
         to: now.toISOString(),
       },
     }),
+    next: { revalidate: 3600 }
   });
 
   if (!res.ok) {
