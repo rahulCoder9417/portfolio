@@ -56,7 +56,7 @@ export const config ={
         { icon: Github, label: "GitHub", href: "https://github.com/rahulCoder9417" },
         { icon: Twitter, label: "Twitter", href: "https://x.com/RahulKumar9417" },
         { label: "Fiverr", href: "https://www.fiverr.com/rahulCoder9417" },
-        { label: "Upwork", href: "https://www.upwork.com/freelancers/your-id" },
+        { label: "Upwork", href: "https://www.upwork.com/freelancers/~0131fa79af2d84bdfa" },
       ],
     "FeaturedProject": {
         title: "DevSync",
