@@ -151,7 +151,7 @@ const Index = () => {
       {[
         "Next.js",
         "Tailwind CSS",
-
+        "RTK",
         "TypeScript",
         "Node.js",
         "Express",

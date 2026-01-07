@@ -1,10 +1,13 @@
 import { config } from "@/utlis/config";
 import {
+  ArrowLeft,
   Github,
   Linkedin,
   Mail,
+  Phone,
   Twitter,
 } from "lucide-react";
+import { Button } from "./ui/button";
 
 const primaryContacts = config.primaryContact
 
@@ -49,6 +52,19 @@ const Contact = () => {
               {label}
             </a>
           ))}
+          <Button
+          variant="link"
+          size="default"
+          className="  inline-flex items-center gap-3
+                rounded-xl bg-primary px-8 py-6
+                text-primary-foreground font-medium
+                shadow-glow
+                transition-all duration-300
+                hover:scale-105"
+          >
+          <Phone className="w-4 h-4" />
+         9417920371
+        </Button>
         </div>
 
         {/* Secondary Links */}
