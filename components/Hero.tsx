@@ -1,5 +1,5 @@
 "use client"
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -48,7 +48,16 @@ const Hero = () => {
           >
             Get In Touch
           </button>
+        
         </div>
+        <a
+    href="/Resume.pdf"
+    download
+    className="group inline-flex items-center gap-2 cursor-pointer rounded-full border border-primary px-8 py-4 font-medium text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105"
+  >
+    Download Résumé
+    <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+  </a>
       </div>
 
       {/* Scroll Indicator */}
