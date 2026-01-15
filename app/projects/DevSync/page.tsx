@@ -192,7 +192,7 @@ const Index = () => {
 
       {/* Divider */}
       <div className="project-section-divider" />
-<ProjectFooter githubLink="dev-sync" />
+<ProjectFooter githubLink="dev-sync-docs" />
       
     </div>
   );
