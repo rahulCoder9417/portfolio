@@ -157,7 +157,7 @@ const About = () => {
         </div>
 
         {/* ================= Stats ================= */}
-        <div className="flex gap-14 justify-center flex-wrap">
+        <div className="flex gap-8 justify-center flex-wrap">
 
           {/* LeetCode */}
           <div className="p-8 rounded-2xl bg-card border border-border shadow-card flex flex-col items-center">
@@ -178,72 +178,60 @@ const About = () => {
           </div>
 
           {/* GitHub Commits */}
-          <div className="p-8 rounded-2xl bg-card border border-border shadow-card min-w-[320px]">
+          <div className="p-8 rounded-2xl bg-card border border-border shadow-card">
+            <div className="flex items-center justify-between gap-8 mb-5">
+              <h4 className="text-lg font-semibold">GitHub · Last 61 Days</h4>
+              <a
+                href="https://github.com/rahulCoder9417"
+                target="_blank"
+                className="text-sm text-muted-foreground hover:text-primary transition"
+              >
+                View Profile →
+              </a>
+            </div>
 
-            <h4 className="text-lg font-semibold mb-4">
-              GitHub · Last 31 Days
-            </h4>
-
-            <div className="flex gap-6 items-start">
-              {/* Grid */}
-              {loadingCommits ? (
-                <div className="text-sm text-muted-foreground">
-                  Loading GitHub activity…
-                </div>
-              ) : (
-                <div className="grid grid-cols-5 gap-x-[6px] gap-y-[6px]">
-                  {commits.map(({ count, date }, index) => (
-                    <div key={index} className="group relative">
-                      <div
-                        className={`h-5 w-5 rounded-sm ${commitShade(count)}
-                                    transition-transform group-hover:scale-110`}
-                      />
-
-                      {/* Tooltip */}
-                      <div
-                        className="pointer-events-none absolute -top-8 z-10 left-1/2 -translate-x-1/2
-                                   rounded-md bg-background px-2 py-0.5 text-xs
-                                   border border-border opacity-0 scale-95
-                                   group-hover:opacity-100 group-hover:scale-100 transition"
-                      >
-                        {count} commit{count !== 1 ? "s" : ""}<br />
-                        <span className="text-muted-foreground">{date}</span>
-                      </div>
-                    </div>
+            {loadingCommits ? (
+              <div className="text-sm text-muted-foreground">Loading…</div>
+            ) : (
+              <>
+                {/* Contribution Grid: 5 rows, flows into columns */}
+                <div
+                  className="grid gap-1.5"
+                  style={{
+                    gridTemplateRows: 'repeat(5, 24px)',
+                    gridAutoFlow: 'column',
+                    gridAutoColumns: '24px',
+                  }}
+                >
+                  {commits.map(({ count, date }, i) => (
+                    <div
+                      key={i}
+                      title={`${count} contributions on ${date}`}
+                      className={`h-6 w-6 rounded ${commitShade(count)}
+                                  hover:scale-110 transition-transform cursor-pointer`}
+                    />
                   ))}
                 </div>
-              )}
 
-              {/* Legend + Total */}
-              <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <span>Less</span>
-                  <div className="flex gap-[1px]">
-                    <div className="h-3 w-3 bg-muted rounded-sm" />
-                    <div className="h-3 w-3 bg-primary/20 rounded-sm" />
-                    <div className="h-3 w-3 bg-primary/40 rounded-sm" />
-                    <div className="h-3 w-3 bg-primary/60 rounded-sm" />
-                    <div className="h-3 w-3 bg-primary rounded-sm" />
+                {/* Footer */}
+                <div className="flex items-center justify-between mt-4 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-1">
+                    <span>Less</span>
+                    <div className="flex gap-0.5">
+                      <div className="h-3 w-3 rounded-sm bg-muted" />
+                      <div className="h-3 w-3 rounded-sm bg-primary/30" />
+                      <div className="h-3 w-3 rounded-sm bg-primary/50" />
+                      <div className="h-3 w-3 rounded-sm bg-primary/70" />
+                      <div className="h-3 w-3 rounded-sm bg-primary" />
+                    </div>
+                    <span>More</span>
                   </div>
-                  <span>More</span>
-                </div>
-
-                <div>
-                  Total commits:{" "}
-                  <span className="text-foreground font-medium">
-                    {totalCommits}
+                  <span>
+                    Total: <span className="text-foreground font-medium">{totalCommits.toLocaleString()}</span>
                   </span>
                 </div>
-
-                <a
-                  href="https://github.com/rahulCoder9417"
-                  target="_blank"
-                  className="hover:text-primary transition"
-                >
-                  Open GitHub →
-                </a>
-              </div>
-            </div>
+              </>
+            )}
           </div>
         </div>
 

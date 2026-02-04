@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic';
+
 const GITHUB_API = "https://api.github.com/graphql";
 
 export async function GET() {
@@ -8,9 +10,9 @@ export async function GET() {
 
   const now = new Date();
   const from = new Date();
-  from.setDate(now.getDate() - 31);
+  from.setDate(now.getDate() - 61);
 
-  // Query for last 31 days
+  // Query for last 61 days
   const recentQuery = `
     query($login: String!, $from: DateTime!, $to: DateTime!) {
       user(login: $login) {
@@ -92,9 +94,9 @@ export async function GET() {
       recentJson.data.user.contributionsCollection.contributionCalendar.weeks
         .flatMap((week: any) => week.contributionDays);
 
-    // Get exactly the last 31 days
+    // Get exactly the last 61 days
     const dailyCommits = allDays
-      .slice(-31)
+      .slice(-61)
       .map((d: any) => ({
         date: d.date,
         count: d.contributionCount,
