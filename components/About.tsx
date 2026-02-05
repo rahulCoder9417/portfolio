@@ -195,24 +195,42 @@ const About = () => {
             ) : (
               <>
                 {/* Contribution Grid: 5 rows, flows into columns */}
-                <div
-                  className="grid gap-1.5"
-                  style={{
-                    gridTemplateRows: 'repeat(5, 24px)',
-                    gridAutoFlow: 'column',
-                    gridAutoColumns: '24px',
-                  }}
-                >
-                  {commits.map(({ count, date }, i) => (
-                    <div
-                      key={i}
-                      title={`${count} contributions on ${date}`}
-                      className={`h-6 w-6 rounded ${commitShade(count)}
+                <div className="flex items-center justify-center gap-4">
+                  <div
+                    className="grid gap-1.5"
+                    style={{
+                      gridTemplateRows: 'repeat(5, 24px)',
+                      gridAutoFlow: 'column',
+                      gridAutoColumns: '24px',
+                    }}
+                  >
+                    {commits.slice(0, 30).map(({ count, date }, i) => (
+                      <div
+                        key={i}
+                        title={`${count} contributions on ${date}`}
+                        className={`h-6 w-6 rounded ${commitShade(count)}
                                   hover:scale-110 transition-transform cursor-pointer`}
-                    />
-                  ))}
+                      />
+                    ))}
+                  </div>
+                  <div
+                    className="grid gap-1.5"
+                    style={{
+                      gridTemplateRows: 'repeat(5, 24px)',
+                      gridAutoFlow: 'column',
+                      gridAutoColumns: '24px',
+                    }}
+                  >
+                    {commits.slice(30).map(({ count, date }, i) => (
+                      <div
+                        key={i}
+                        title={`${count} contributions on ${date}`}
+                        className={`h-6 w-6 rounded ${commitShade(count)}
+                                  hover:scale-110 transition-transform cursor-pointer`}
+                      />
+                    ))}
+                  </div>
                 </div>
-
                 {/* Footer */}
                 <div className="flex items-center justify-between mt-4 text-xs text-muted-foreground">
                   <div className="flex items-center gap-1">
