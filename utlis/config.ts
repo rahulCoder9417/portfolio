@@ -14,7 +14,7 @@ export const config ={
         "open_to_work": true
     },
     "techStack": {
-        "primary": ["Next.js", "Node.js","Yjs", "WebSockets","React.js","JavaScript","TypeScript","Prisma","RTK","Postgres SQL","Redis","Express","Drizzle","Docker","Git","Mongo DB","Zod","Render","Vercel"],
+        "primary": ["Next.js", "Node.js","Yjs", "WebSockets","React.js","JavaScript","TypeScript","Prisma","RTK","Postgres SQL","Redis","Express","Fastify","Drizzle","Docker","Git","Mongo DB","Zod","Render","Vercel"],
         "secondary": ["Python","C","C++","Tailwind","Shadcn","HTML","Cloudinary"],
     },
     "coreExpertise": [
