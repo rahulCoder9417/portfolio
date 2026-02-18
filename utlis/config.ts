@@ -3,9 +3,9 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 export const config ={
   
   "leetCodeStats": {
-    "solved": 102,
-    "easy": 19,
-    "medium": 83,
+    "solved": 111,
+    "easy": 23,
+    "medium": 88,
     "hard": 0,
 },
     "about": {
@@ -14,8 +14,8 @@ export const config ={
         "open_to_work": true
     },
     "techStack": {
-        "primary": ["Next.js", "Node.js","Yjs", "WebSockets","React.js","JavaScript","TypeScript","Prisma","RTK","Postgres SQL","Redis","Express","Fastify","Drizzle","Docker","Git","Mongo DB","Zod","Render","Vercel"],
-        "secondary": ["Python","C","C++","Tailwind","Shadcn","HTML","Cloudinary"],
+        "primary": ["Next.js", "Node.js","Yjs", "WebSockets","React.js","JavaScript","TypeScript","Prisma","RTK","Postgres SQL","Redis","Express","Fastify","Drizzle","Docker","Git","Mongo DB"],
+        "secondary": ["Python","C","C++","Tailwind","Shadcn"],
     },
     "coreExpertise": [
         "Full-Stack Engineering",

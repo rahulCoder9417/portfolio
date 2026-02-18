@@ -132,8 +132,9 @@ const About = () => {
               {techStack.secondary.map(skill => (
                 <span
                   key={skill}
-                  className="px-3 py-1 rounded-full bg-muted text-muted-foreground
-                             hover:text-foreground transition"
+                  className="px-4 py-2 rounded-full bg-muted text-muted-foreground font-semibold
+                             hover:bg-primary hover:text-primary-foreground
+                             hover:shadow-glow transition"
                 >
                   {skill}
                 </span>
@@ -205,12 +206,17 @@ const About = () => {
                     }}
                   >
                     {commits.slice(0, 30).map(({ count, date }, i) => (
-                      <div
-                        key={i}
-                        title={`${count} contributions on ${date}`}
-                        className={`h-6 w-6 rounded ${commitShade(count)}
-                                  hover:scale-110 transition-transform cursor-pointer`}
-                      />
+                      <div key={i} className="relative group/item">
+                        <div
+                          className={`h-6 w-6 rounded ${commitShade(count)}
+                group-hover/item:scale-110 transition-transform cursor-pointer`}
+                        />
+                        <span className="absolute hidden z-10 top-8 bg-black text-white text-xs  px-2 py-1 rounded
+                   group-hover/item:flex w-42">
+                          {count || 0} commits on {date}
+                        </span>
+                      </div>
+
                     ))}
                   </div>
                   <div
@@ -222,12 +228,17 @@ const About = () => {
                     }}
                   >
                     {commits.slice(30).map(({ count, date }, i) => (
-                      <div
-                        key={i}
-                        title={`${count} contributions on ${date}`}
-                        className={`h-6 w-6 rounded ${commitShade(count)}
-                                  hover:scale-110 transition-transform cursor-pointer`}
-                      />
+                      <div key={i} className="relative group/item">
+                        <div
+                          className={`h-6 w-6 rounded ${commitShade(count)}
+                group-hover/item:scale-110 transition-transform cursor-pointer`}
+                        />
+                        <span className="absolute hidden z-10 top-8 bg-black text-white text-xs  px-2 py-1 rounded
+                   group-hover/item:flex w-42">
+                          {count || 0} commits on {date}
+                        </span>
+                      </div>
+
                     ))}
                   </div>
                 </div>
