@@ -145,5 +145,21 @@ Background workflows automate emails, reminders, and overdue handling reliably.`
           "Mongoose",
           "REST APIs",
         ],
-      }            
-}
+    },
+    "experience":[
+  {
+    role: "Fullstack Developer Intern",
+    company: "Inboxkit",
+    location: "Remote - Gurgaon, India",
+    period: "Jan 2025 – Present",
+    description:
+      "Building Fullstack Applications,which are scalable and maintainable",
+    highlights: [
+      "Improved Performance by optimizing database queries and reducing API response times.",
+      "Made Company sub products from scratch alone.",
+      "Working on multiple frameworks and languages simultaneously.",
+    ],
+    tags: ["Next.js", "MERN", "Go", "Fastify"],
+    current: true,
+  },
+]}     
