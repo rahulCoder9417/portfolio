@@ -151,7 +151,7 @@ Background workflows automate emails, reminders, and overdue handling reliably.`
     role: "Fullstack Developer Intern",
     company: "Inboxkit",
     location: "Remote - Gurgaon, India",
-    period: "Jan 2025 – Present",
+    period: "Jan 2026 – Present",
     description:
       "Building Fullstack Applications,which are scalable and maintainable",
     highlights: [
