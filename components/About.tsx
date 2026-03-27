@@ -181,7 +181,7 @@ const About = () => {
           {/* GitHub Commits */}
           <div className="p-8 rounded-2xl bg-card border border-border shadow-card">
             <div className="flex items-center justify-between gap-8 mb-5">
-              <h4 className="text-lg font-semibold">GitHub · Last 61 Days</h4>
+              <h4 className="text-lg font-semibold">GitHub · Last {(config.gitMonths * 30) + 1} Days</h4>
               <a
                 href="https://github.com/rahulCoder9417"
                 target="_blank"
@@ -197,50 +197,34 @@ const About = () => {
               <>
                 {/* Contribution Grid: 5 rows, flows into columns */}
                 <div className="flex items-center justify-center gap-4">
-                  <div
-                    className="grid gap-1.5"
-                    style={{
-                      gridTemplateRows: 'repeat(5, 24px)',
-                      gridAutoFlow: 'column',
-                      gridAutoColumns: '24px',
-                    }}
-                  >
-                    {commits.slice(0, 30).map(({ count, date }, i) => (
-                      <div key={i} className="relative group/item">
-                        <div
-                          className={`h-6 w-6 rounded ${commitShade(count)}
+                  {Array.from({ length: config.gitMonths }, (_, monthIdx) => {
+                    const start = monthIdx * 30;
+                    const end = monthIdx === config.gitMonths - 1 ? start + 31 : start + 30;
+                    return (
+                      <div
+                        key={monthIdx}
+                        className="grid gap-1.5"
+                        style={{
+                          gridTemplateRows: 'repeat(5, 24px)',
+                          gridAutoFlow: 'column',
+                          gridAutoColumns: '24px',
+                        }}
+                      >
+                        {commits.slice(start, end).map(({ count, date }, i) => (
+                          <div key={i} className="relative group/item">
+                            <div
+                              className={`h-6 w-6 rounded ${commitShade(count)}
                 group-hover/item:scale-110 transition-transform cursor-pointer`}
-                        />
-                        <span className="absolute hidden z-10 top-8 bg-black text-white text-xs  px-2 py-1 rounded
+                            />
+                            <span className="absolute hidden z-10 top-8 bg-black text-white text-xs  px-2 py-1 rounded
                    group-hover/item:flex w-42">
-                          {count || 0} commits on {date}
-                        </span>
+                              {count || 0} commits on {date}
+                            </span>
+                          </div>
+                        ))}
                       </div>
-
-                    ))}
-                  </div>
-                  <div
-                    className="grid gap-1.5"
-                    style={{
-                      gridTemplateRows: 'repeat(5, 24px)',
-                      gridAutoFlow: 'column',
-                      gridAutoColumns: '24px',
-                    }}
-                  >
-                    {commits.slice(30).map(({ count, date }, i) => (
-                      <div key={i} className="relative group/item">
-                        <div
-                          className={`h-6 w-6 rounded ${commitShade(count)}
-                group-hover/item:scale-110 transition-transform cursor-pointer`}
-                        />
-                        <span className="absolute hidden z-10 top-8 bg-black text-white text-xs  px-2 py-1 rounded
-                   group-hover/item:flex w-42">
-                          {count || 0} commits on {date}
-                        </span>
-                      </div>
-
-                    ))}
-                  </div>
+                    );
+                  })}
                 </div>
                 {/* Footer */}
                 <div className="flex items-center justify-between mt-4 text-xs text-muted-foreground">

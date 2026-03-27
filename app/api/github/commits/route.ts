@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
+import { config } from "@/utlis/config";
 
 export const dynamic = 'force-dynamic';
 
 const GITHUB_API = "https://api.github.com/graphql";
+
+const totalDays = (config.gitMonths * 30) + 1;
 
 export async function GET() {
   const token = process.env.GITHUB_TOKEN!;
@@ -10,9 +13,9 @@ export async function GET() {
 
   const now = new Date();
   const from = new Date();
-  from.setDate(now.getDate() - 61);
+  from.setDate(now.getDate() - totalDays);
 
-  // Query for last 61 days
+  // Query for last N days based on gitMonths config
   const recentQuery = `
     query($login: String!, $from: DateTime!, $to: DateTime!) {
       user(login: $login) {
@@ -94,9 +97,9 @@ export async function GET() {
       recentJson.data.user.contributionsCollection.contributionCalendar.weeks
         .flatMap((week: any) => week.contributionDays);
 
-    // Get exactly the last 61 days
+    // Get exactly the last N days
     const dailyCommits = allDays
-      .slice(-61)
+      .slice(-totalDays)
       .map((d: any) => ({
         date: d.date,
         count: d.contributionCount,

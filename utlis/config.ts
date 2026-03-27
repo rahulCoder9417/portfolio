@@ -1,12 +1,14 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export const config ={
-  
+
+  "gitMonths": 4,
+
   "leetCodeStats": {
-    "solved": 111,
-    "easy": 23,
-    "medium": 88,
-    "hard": 0,
+    "solved": 126,
+    "easy": 24,
+    "medium": 99,
+    "hard": 3,
 },
     "about": {
         "age": 19,
