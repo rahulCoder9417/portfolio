@@ -1,4 +1,4 @@
-import { config } from "@/utlis/config";
+import { config } from "@/utils/config";
 import FeaturedProject from "./FeaturedProject";
 import ProjectCardSmall from "./ProjectCardSmall";
 const featuredProject =config.FeaturedProject

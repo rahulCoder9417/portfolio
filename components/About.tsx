@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { config } from "@/utlis/config";
+import { config } from "@/utils/config";
 import {
   Code2,
   Server,

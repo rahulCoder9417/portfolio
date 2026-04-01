@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { config } from "@/utlis/config";
+import { config } from "@/utils/config";
 
 export const dynamic = 'force-dynamic';
 

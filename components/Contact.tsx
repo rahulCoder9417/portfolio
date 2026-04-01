@@ -1,4 +1,4 @@
-import { config } from "@/utlis/config";
+import { config } from "@/utils/config";
 import {
   ArrowLeft,
   Github,

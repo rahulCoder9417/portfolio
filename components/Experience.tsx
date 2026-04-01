@@ -1,5 +1,5 @@
 import { Briefcase, Calendar, MapPin } from "lucide-react";
-import {config} from "../utlis/config";
+import { config } from "@/utils/config";
 
 const experiences = config.experience;
 const Experience = () => {
